@@ -1,0 +1,98 @@
+
+* {
+    box-sizing: border-box;
+    /* 在X5新内核Blink中，在排版页面的时候，会主动对字体进行放大，会检测页面中的主字体，当某一块字体在我们的判定规则中，认为字号较小，并且是页面中的主要字体，就会采取主动放大的操作。然而这不是我们想要的，可以采取给最大高度解决 */
+    max-height: 100000px;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+    max-height: 100000px;
+}
+
+*, *:before, *:after {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th,textarea, td {
+    border: 0 none;
+    font-size: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+em, strong {
+    font-style: normal;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1",Arial,sans-serif;
+    line-height: 1.5;
+    color: #4d4d4d;
+    background-color: #f2f2f2;
+    font-size: 0.24rem;
+}
+
+a {
+    color: #4d4d4d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+input {
+    border: none;
+    outline: none;
+    /*清除移动端默认的表单样式*/
+    -webkit-appearance: none;
+}
+
+
+/*字体跟随屏幕尺寸变化*/
+.cost_content {
+    text-align: center;
+    color: #4d4d4d;
+    padding-top: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/*480分辨率以下（小于479px）*/
+@media only screen and (max-width: 479px) {
+    .cost_content {
+        font-size: 12px;
+    }
+}
+
+/*720分辨率（大于480px，小于767px）*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .cost_content{
+        font-size: 16px;
+    }
+}
+
+/*880分辨率（大于768px，小于959px）*/
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .cost_content {
+        font-size: 20px;
+    }
+}
+
+/*1100分辨率（大于960px，小于1199px）*/
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .cost_content {
+        font-size: 24px;
+    }
+}
